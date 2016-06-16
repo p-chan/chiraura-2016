@@ -1,0 +1,18 @@
+{{ partial "hugo-head.html" . }}
+  <nav>
+    <a href="/"><img src="" alt="{{ .Site.Title }}"></a>
+  </nav>
+  <article>
+    <header class="p-article-header">
+      <h1 class="p-article-header__title">{{ .Title }}</h1>
+      <p class="p-article-header__meta">Published on <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time></p>
+    </header>
+    <div class="p-article-body">
+      {{ .Content }}
+    </div>
+    <div class="p-article-footer">
+      <a href="https://twitter.com/share?url={{ .Permalink }}&via={{ .Site.Params.twitter }}&text={{ .Title }} - {{ .Site.Title }}" onclick="window.open(this.href, 'tweetwindow', 'width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=1'); return false;">ツイート</a>
+    </div>
+  </article>
+{{ partial "footer.html" . }}
+{{ partial "hugo-foot.html" . }}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <title>{{ if .IsPage }}{{ .Title }} - {{end}}{{ .Site.Title }}</title>
+{{ partial "meta.html" . }}
+  <link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}index.xml">
+  <link rel="stylesheet" href="/assets/stylesheets/app.css">
+{{ partial "analytics.html" . }}
+</head>
+<body>

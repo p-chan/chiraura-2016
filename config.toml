@@ -1,3 +1,8 @@
 baseurl = "http://chiraura.me/"
 languageCode = "ja"
 title = "chiraura.me"
+
+[params]
+description = "A Nikki, written by P-Chan."
+twitter = "p1ch_jp"
+analytics = "UA-51868894-4"

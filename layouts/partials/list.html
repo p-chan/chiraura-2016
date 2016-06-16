@@ -1,0 +1,8 @@
+    <ul class="c-list">
+      {{ range .Data.Pages }}
+      <li class="c-list__item">
+        <h2 class="c-list__item__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p class="c-list__item__meta">Published on <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time></p>
+      </li>
+      {{ end }}
+    </ul>
